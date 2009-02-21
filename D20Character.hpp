@@ -2,13 +2,12 @@
 #define __D20Character
 
 #include "D20Abilities.hpp"
+#include "D20SavingThrows.hpp"
+#include "D20Skills.hpp"
+#include "D20ArmorClass.hpp"
 
 namespace D20Rules
 {
-    namespace PrivateData
-    {
-    }
-    
     class D20Character
     {
     private:
@@ -16,7 +15,11 @@ namespace D20Rules
     public:
         D20Character();
         
+        Containers::D20Skills Skills;
         Containers::D20Abilities Abilities;
+        Containers::D20SavingThrows SavingThrows;
+        
+        RolledAgainst::D20ArmorClass ArmorClass;
     };
 }
 
